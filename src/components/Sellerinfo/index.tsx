@@ -56,7 +56,7 @@ const Sellerinfo: React.FC = () => {
       </ReputationCard>
 
 
-      <More>Ver mais dados do vendedor</More>
+      <More href="#">Ver mais dados do vendedor</More>
     </Container>
   );
 };
