@@ -4,7 +4,9 @@ import SellerInfo from '../Sellerinfo'
 import ProductAction from '../ProductAction';
 
 import { Container, Row, Panel, Column, Gallery, Section, Description } from './styles';
-
+import src from '*.bmp';
+// import ZoomableImage from '../ImageZoom';
+import ReactImageMagnify from 'react-image-magnify';
 const Product: React.FC = () => {
   return (
     <Container>
@@ -17,7 +19,25 @@ const Product: React.FC = () => {
       <Panel>
         <Column>
           <Gallery>
-            <img alt="T-shirt" src={tshirtImage} />
+            <ReactImageMagnify 
+              enlargedImageContainerStyle={{ backgroundColor: '#fff' }}
+              enlargedImageContainerDimensions = {{width: 600, height: 600}}
+              smallImage={{
+                src: tshirtImage,
+                width: 450,
+                height: 500,
+                isFluidWidth: false,
+                alt: 'tshirt',
+                // sizes: '(max-width: 900px) 100vw, (max-width: 1200px) 30vw, 360px'
+              }}
+              largeImage={{
+                src: tshirtImage,
+                alt: 'tshirt',
+                height: 1200,
+                width: 900,
+                
+              }}
+            />
           </Gallery>
           <Info />
         </Column>
