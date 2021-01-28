@@ -3,6 +3,7 @@ import Product from '../Product'
 import { Container, Wrapper } from './styles';
 import Header from '../Header';
 import Footer from '../Footer';
+// import ImageZoom from '../ImageZoom'
 
 
 const Layout: React.FC = () => {
@@ -11,6 +12,7 @@ const Layout: React.FC = () => {
       <Header />
       <Wrapper>
         <Product />
+        {/* <ImageZoom /> */}
       </Wrapper>
       <Footer />
     </Container>
