@@ -3,10 +3,13 @@ import tshirtImage from '../../assets/tshirt.png';
 import SellerInfo from '../Sellerinfo'
 import ProductAction from '../ProductAction';
 
+import CarouselProvider from '../Carousel'
+
 import { Container, Row, Panel, Column, Gallery, Section, Description } from './styles';
 import src from '*.bmp';
 // import ZoomableImage from '../ImageZoom';
 import ReactImageMagnify from 'react-image-magnify';
+
 const Product: React.FC = () => {
   return (
     <Container>
@@ -18,8 +21,10 @@ const Product: React.FC = () => {
 
       <Panel>
         <Column>
+          
           <Gallery>
-            <ReactImageMagnify 
+          <CarouselProvider />
+           {/* <ReactImageMagnify 
               enlargedImageContainerStyle={{ backgroundColor: '#fff' }}
               enlargedImageContainerDimensions = {{width: 600, height: 600}}
               smallImage={{
@@ -37,7 +42,8 @@ const Product: React.FC = () => {
                 width: 900,
                 
               }}
-            />
+            /> */}
+            
           </Gallery>
           <Info />
         </Column>
